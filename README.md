@@ -40,24 +40,16 @@ Include in your code and begin using the library:
 #include <dynamic-mapping>
 ```
 
-## Usage
-
-<!--
-Write your code documentation or examples here. If your library is documented in
-the source code, direct users there. If not, list your API and describe it well
-in this section. If your library is passive and has no API, simply omit this
-section.
--->
-
-## Testing
-
-<!--
-Depending on whether your package is tested via in-game "demo tests" or
-y_testing unit-tests, you should indicate to readers what to expect below here.
--->
-
 To test, simply run the package:
 
 ```bash
 sampctl package run
 ```
+
+# Credits 
+* [LuminouZ307](https://github.com/LuminouZ307) my refrence for create this scripts.
+* [Y-less](https://github.com/Y-Less) for YSI-INCLUDES and sscanf
+* [Zeex](https://github.com/Zeex/) for crashdetect plugins
+* [Awsomedude](https://github.com/Awsomedude/) for EasyDialog
+* [oscar-broman](https://github.com/oscar-broman) for strlib
+* [pBlueG](https://github.com/pBlueG) for MySQL-plugins
