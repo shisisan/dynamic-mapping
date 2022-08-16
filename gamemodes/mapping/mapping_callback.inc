@@ -9,7 +9,7 @@
 
 #include <YSI_Coding\y_hooks>
 
-hook OnGameModeInit()
+hook OnGameModeInitEx()
 {
 	mysql_pquery(MySQL_ReturnHandle(), "SELECT * FROM `object` ORDER BY `objectID` ASC LIMIT "#MAX_DYNAMIC_OBJECT";", "Object_Load", "");
     return Y_HOOKS_CONTINUE_RETURN_1;

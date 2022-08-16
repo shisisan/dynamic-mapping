@@ -16,14 +16,14 @@
 #include <easyDialog>
 
 /** Macro */
-new MySQL: m_Handle = MYSQL_INVALID_HANDLE;
+new MySQL: m_Handle;
 #define MySQL_ReturnHandle() m_Handle
+forward OnGameModeInitEx();
 
 #define SendServerMessage(%0,%1)        SendClientMessageEx(%0, X11_LIGHT_SKY_BLUE_1, "SERVER: "WHITE""%1)
 #define SendCustomMessage(%0,%1,%2)     SendClientMessageEx(%0, X11_LIGHT_SKY_BLUE_1, %1": "WHITE""%2)
 #define SendSyntaxMessage(%0,%1)        SendClientMessageEx(%0, X11_GREY_80, "USAGE: "%1)
 #define SendErrorMessage(%0,%1)         SendClientMessageEx(%0, X11_GREY_80, "ERROR: "%1)
-
 
 /** Module */
 #include <mapping_main>
@@ -36,6 +36,7 @@ public OnGameModeInit()
 {
     CreateDatabaseConnection();
     printf("Initialized Gamemode succesfully.");
+	CallLocalFunction(#OnGameModeInitEx, "");
     return 1;
 }
 
