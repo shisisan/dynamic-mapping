@@ -1,0 +1,17 @@
+{
+	"user": "Thoutan1",
+	"repo": "dynamic-mapping",
+	"entry": "gamemodes/main.pwn",
+	"output": "gamemodes/main.amx",
+	"dependencies": [
+		"pawn-lang/samp-stdlib",
+		"pBlueG/SA-MP-MySQL:R41"
+	],
+	"local": true,
+	"runtime": {
+		"version": "0.3.7",
+		"mode": "server",
+		"rcon_password": "password",
+		"port": 7777
+	}
+}
