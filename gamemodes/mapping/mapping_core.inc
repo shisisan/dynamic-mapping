@@ -16,7 +16,7 @@ enum E_OBJECT_DATA
 	Float:objectPos[6],
 	objectVW,
 	objectInterior,
-	object3DText
+	objectCreated
 };
 
 new

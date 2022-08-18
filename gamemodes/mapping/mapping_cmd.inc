@@ -51,7 +51,7 @@ YCMD:objectmenu(playerid, params[], help)
             	return SendErrorMessage(playerid, "Invalid object model.");
 
             SendCustomMessage(playerid, "OBJECT", "Succesfully created object ID: "YELLOW"%d "GREEN"(%s).", index, Object_GetModelName(modelid));
-            EditDynamicObject(playerid, ObjectData[index][object3DText]);
+            EditDynamicObject(playerid, ObjectData[index][objectCreated]);
             SetPVarInt(playerid, "EditingObject", index);
         }
         case 2: //Delete

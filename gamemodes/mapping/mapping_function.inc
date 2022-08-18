@@ -118,8 +118,8 @@ Object_Delete(index)
     {
         mysql_tquery(MySQL_ReturnHandle(), sprintf("DELETE FROM `object` WHERE `objectID` = '%d'", ObjectData[index][objectID]));
 
-        if(IsValidDynamicObject(ObjectData[index][object3DText]))
-	        DestroyDynamicObject(ObjectData[index][object3DText]);
+        if(IsValidDynamicObject(ObjectData[index][objectCreated]))
+	        DestroyDynamicObject(ObjectData[index][objectCreated]);
 
         new tmp_ObjectData[E_OBJECT_DATA];
 		ObjectData[index] = tmp_ObjectData;
@@ -133,10 +133,10 @@ Object_Sync(index)
 {
     if (index != -1 && Object_IsExists(index))
 	{
-	    if (IsValidDynamicObject(ObjectData[index][object3DText]))
-	        DestroyDynamicObject(ObjectData[index][object3DText]);
+	    if (IsValidDynamicObject(ObjectData[index][objectCreated]))
+	        DestroyDynamicObject(ObjectData[index][objectCreated]);
 
-	 	ObjectData[index][object3DText] = CreateDynamicObject(ObjectData[index][objectModel], ObjectData[index][objectPos][0], ObjectData[index][objectPos][1], ObjectData[index][objectPos][2] - 0.0, ObjectData[index][objectPos][3], ObjectData[index][objectPos][4], ObjectData[index][objectPos][5], ObjectData[index][objectVW], ObjectData[index][objectInterior]);
+	 	ObjectData[index][objectCreated] = CreateDynamicObject(ObjectData[index][objectModel], ObjectData[index][objectPos][0], ObjectData[index][objectPos][1], ObjectData[index][objectPos][2] - 0.0, ObjectData[index][objectPos][3], ObjectData[index][objectPos][4], ObjectData[index][objectPos][5], ObjectData[index][objectVW], ObjectData[index][objectInterior]);
 		return 1;
 	}
 	return 0;
